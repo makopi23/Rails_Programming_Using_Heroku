@@ -1,0 +1,27 @@
+<% if false%>
+<table>
+	<tr><th>ID</th><td><%= @result.id %></td></tr>
+	<tr><th>NAME</th><td><%= @result.name %></td></tr>
+	<tr><th>AGE</th><td><%= @result.age %></td></tr>
+	<tr><th>Mail</th><td><%= @result.mail %></td></tr>
+	<tr><th>Tel</th><td><%= @result.tel %></td></tr>
+	<tr><th>Create</th><td><%= @result.created_at %></td></tr>
+	<tr><th>Update</th><td><%= @result.updated_at %></td></tr>
+</table>
+<hr/>
+<a href="/sample/index"><< index</a>
+<% end %>
+
+<table>
+	<form method="post" action="/sample/update">
+		<tr><th>ID</th><td><%= @result.id %></td></tr>
+		<input type="hidden" name="id" value="<%= @result.id %>" />
+		<tr><th>Age</th><td><input type="text" name="age" value="<%= @result.age %>" /></td></tr>
+		<tr><th>Name</th><td><input type="text" name="name" value="<%= @result.name %>" /></td></tr>
+		<tr><th>Mail</th><td><input type="text" name="mail" value="<%= @result.mail %>" /></td></tr>
+		<tr><th>Tel</th><td><input type="text" name="tel" value="<%= @result.tel %>" /></td></tr>
+		<tr><th></th><td><input type="submit" value="送信"/></td></tr>
+	</form>
+</table>
+<hr/>
+<a href="/sample/index"> ＜＜index </a>

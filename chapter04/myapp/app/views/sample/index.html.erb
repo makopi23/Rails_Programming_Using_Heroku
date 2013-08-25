@@ -1,0 +1,13 @@
+<h1>Sample#index</h1>
+<p>indexアクションのテンプレートです。</p>
+<hr/>
+<%
+#time = Time.now
+#str = "今現在の時刻：" + time.to_s
+%>
+<p><%= @str %></p>
+<form method="post" action="/sample/index">
+	<input type="text" name="text1">
+	<input type="submit">
+</form>
+<%= @msg %>

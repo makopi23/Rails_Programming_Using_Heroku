@@ -1,0 +1,54 @@
+<% if false %>
+<table>
+<% @datas.each do |data| %>
+<tr>
+	<td><%= data.name %>
+	<td><%= data.age %>
+	<td><%= data.mail %>
+	<td><%= data.tel %>
+</tr>
+<% end %>
+</table>
+<% end %>
+
+<form method="post" action="/sample/index">
+<table>
+	<tr>
+		<th>NAME:</th>
+		<td><input type="text" name="name" /></td>
+	</tr>
+	<tr>
+		<th>AGE:</th>
+		<td><input type="text" name="age" /></td>
+	</tr>
+	<tr>
+		<th>MAIL:</th>
+		<td><input type="text" name="mail" /></td>
+	</tr>
+	<tr>
+		<th>TEL:</th>
+		<td><input type="text" name="tel" /></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td><input type="submit" /></td>
+	</tr>
+</table>
+</form>
+
+<hr/>
+	
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Mail</th>
+		<th>Tel</th>
+		<th></th>
+	</tr>
+
+	<%= render :partial => "layouts/partials/mydata", :collection => @datas %>
+</table>
+
+<td><a href="/sample/find">Search</a></td>
