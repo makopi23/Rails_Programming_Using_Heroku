@@ -1,0 +1,22 @@
+<table>
+	<form method="post" action="/sample/find">
+		<tr><th>FIND:</th><td><input type="text" name="fstr"/></td></tr>
+		<tr><th></th><td><input type="submit" value="送信"></td></tr>
+	</form>
+</table>
+<hr/>
+
+<table>
+	<tr>
+		<th>ID</th>
+	    <th>Name</th>
+		<th>Age</th>
+		<th>Mail</th>
+		<th>Tel</th>
+		<th></th>
+		<th></th>
+	</tr>
+    <%= render :partial => "layouts/partials/mydata", :collection => @datas %>
+</table>
+<hr/>
+<a href="/sample/index">＜＜ index</a>

@@ -1,0 +1,32 @@
+<form method="post" action="/memo/index">
+	<table>
+		<tr>
+			<th>SAMPLE ID:</th>
+			<td><input type="text" name="sample_id" value="<% if @flg then %><%= @memo.sample_id %><% end %>"></td>
+		</tr>
+		<tr>
+			<th>TITLE:</th>
+			<td><input type="text" name="title" value="<% if @flg then %><%= @memo.title %><% end %>"></td>
+		</tr>
+		<tr>
+			<th>COMMENT:</th>
+			<td><input type="text" name="comment" value="<% if @flg then %><%= @memo.comment %><% end %>"></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td><input type="submit"></td>
+		</tr>
+	</table>
+</form>
+<hr/>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>SAMPLE</th>
+		<th>TITLE</th>
+		<th>COMMENT</th>
+	</tr>
+	<%= render :partial => "layouts/partials/mymemo", :collection => @datas %>
+		
+	</tr>
+</table>
